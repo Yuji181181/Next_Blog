@@ -1,4 +1,11 @@
 import Image from 'next/image'
+import ArticleList from './components/ArticleList'
 
 export default function Home() {
-  return <div>記事投稿</div>}
+  return 
+  <div>
+    <section>
+      <ArticleList />
+    </section>
+  </div>
+}
