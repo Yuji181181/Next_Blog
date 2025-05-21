@@ -1,7 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
+import { getDetailArticle } from '@/blogAPI';
 
-const Article = ({params}: {params: {id: string}}) => {
+const Article = async ({params}: {params: {id: string}}) => {
+  const detailarticle = await getDetailArticle(params.id);
+
   return (
     <div className="max-w-3xl mx-auto p-4">
       <Image
@@ -10,9 +13,9 @@ const Article = ({params}: {params: {id: string}}) => {
         width={1280}
         height={300}
       />
-      <h1 className="text-4xl text-center mb-10 mt-10">ここがタイトル</h1>
+      <h1 className="text-4xl text-center mb-10 mt-10">{detailarticle.title}</h1>
       <div className="text-lg leading-relaxed text-justify">
-        <p>ここが本文</p>
+        <p>{detailarticle.content}</p>
       </div>
     </div>
   )
