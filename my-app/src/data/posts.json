@@ -2,8 +2,8 @@
   "posts": [
     {
       "id": "nextjs13-udemy",
-      "title": "Next.js13をUdemyで学ぶ",
-      "content": "shincodeさんの教材でNext.js13を学んでいます！",
+      "title": "Next.js13を学ぶ",
+      "content": "Next.js13を学んでいます！",
       "createdAt": "2023-07-17"
     },
     {
